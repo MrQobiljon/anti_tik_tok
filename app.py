@@ -26,3 +26,6 @@ async def root(tite: str = Form(...), description: str = Form(...), file: Upload
 @video_router.get('/video/{video_pk}/', response_model=GetVideo)
 async def get_video(video_pk: int):
     return await Video.objects.select_related('user').get(pk=video_pk)
+
+
+print('test')
